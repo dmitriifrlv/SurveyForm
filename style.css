@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "content content content"
+    ". form ."
+    "gl gl gl"
+    "f f f";
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: rgb(71, 51, 14);
+  line-height: 1.4;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url(https://i.ibb.co/4ppBr6Z/coffee-1390800-1920.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgb(71, 51, 14);
+  padding: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+button,
+select,
+textarea {
+  width: 18rem;
+  height: 4rem;
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 2px solid rgba(71, 51, 14);
+}
+
+button {
+  border: none;
+}
+
+input:focus,
+select:focus {
+  outline: 1px solid silver;
+  border-radius: 20px;
+}
+
+#submit {
+  background-color: rgba(75, 60, 41, 0.842);
+  padding: 0.6rem 1.3rem;
+  border-radius: 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.header {
+  grid-area: header;
+  padding: 0 0.625rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+#description {
+  grid-column: 1/-1;
+  margin-left: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  grid-area: form;
+  background-color: rgba(204, 180, 168, 0.767);
+  border-radius: 1rem;
+  border: 2px solid rgba(71, 51, 14);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+}
+
+#farewell {
+  grid-area: gl;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+footer {
+  grid-area: f;
+  width: 100%;
+  height: 30px;
+  background-size: 25%;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid rgb(131, 91, 42);
+  padding: 0.75rem 0;
+  margin-top: 50px;
+  font-weight: 400;
+}
+
+.form-group > p {
+  padding: 2rem;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  width: auto;
+}
+label {
+  line-height: 3rem;
+  color: rgb(71, 51, 14);
+  font-weight: 600;
+}
+
+.cb > label,
+.r > label {
+  display: flex;
+  flex-direction: row;
+  padding-left: 2rem;
+  line-height: 1.5rem;
+}
+
+#r {
+  text-align: center;
+  color: rgb(71, 51, 14);
+  font-weight: 600;
+}
+
+input {
+  color: rgb(71, 51, 14);
+  background-color: rgba(240, 235, 235, 0.9);
+  font-weight: 100;
+  opacity: 0.9;
+}
+
+#smth {
+  padding-top: 1rem;
+  font-weight: 600;
+}
+
+#cool {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+#nope {
+  padding-top: 1.2rem;
+  padding-left: 0.5rem;
+  display: flex;
+  justify-content: justify;
+}
+
+#yeah {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.classy {
+  margin-top: 0.5rem;
+}
+
+#s {
+  font-weight: 600;
+  text-align: center;
+}
+
+#numOfCups {
+  font-weight: 600;
+  text-align: center;
+  line-height: 2rem;
+}
+
+#favDrink {
+  font-weight: 600;
+  text-align: center;
+  line-height: 2rem;
+}
+
+select {
+  color: rgb(71, 51, 14);
+  font-weight: 300;
+  opacity: 0.9;
+  width: 21rem;
+  background-color: rgba(240, 235, 235, 0.9);
+}
+
+#age {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 2rem;
+  font-weight: 200;
+  opacity: 0.9;
+}
+
+#pros {
+  background-color: rgba(240, 235, 235, 0.9);
+}
+
+#dropdown {
+  width: 18rem;
+}
+
+#survey-form {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
