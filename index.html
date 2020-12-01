@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffeshop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header"><h1 id="title">CoffeeShop Survey Form</h1></header>
+
+      <p id="description">
+        If you want to help us to become better and get your next cup of our
+        amazing coffee for free, please complete the survey below
+      </p>
+      <form class="form" id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name"
+            >First Name:
+            <input
+              class="form-control"
+              type="text"
+              id="name"
+              name="firstName"
+              placeholder="First Name"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="lastName"
+            >Last Name:
+            <input
+              class="form-control"
+              type="text"
+              id="lastName"
+              placeholder="Last Name"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="age"
+            >Your date of birth:
+            <input type="date" id="age" />
+          </label>
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email"
+            >Email:
+            <input
+              class="form-control"
+              type="email"
+              id="email"
+              placeholder="Enter your Email"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            ><p id="numOfCups">How many cups of coffee you drink a day?</p>
+            <p>
+              <input
+                type="number"
+                id="number"
+                min="0"
+                max="100"
+                placeholder="Number of cups"
+                required
+              /></p
+          ></label>
+        </div>
+
+        <div class="dropdown">
+          <label for="dropdown"
+            ><p id="favDrink">
+              What is your favorite drink in our menu?
+            </p></label
+          >
+          <select name="favorite drink" id="dropdown">
+            <option value="">AMERICANO</option>
+            <option value="">CAFFÈ LATTE</option>
+            <option value="">CAFFÈ MOCHA</option>
+            <option value="">CAPPUCCINO</option>
+            <option value="">COLD BREW COFFEE</option>
+            <option value="">ESPRESSO</option>
+            <option value="">FLAT WHITE</option>
+          </select>
+        </div>
+
+        <div>
+          <p id="cool">What do you like about our coffeshop?</p>
+          <div class="cb">
+            <label
+              ><input
+                id="artisan"
+                type="checkbox"
+                name="pros"
+                class="input-checkbox"
+                value="coffee"
+              />
+              <p class="classy">Our delicious artisan coffee</p></label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="pros"
+                class="input-checkbox"
+                value="location"
+              />
+              <p class="classy">Location</p></label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="pros"
+                class="input-checkbox"
+                value="service"
+              />
+              <p class="classy">Our friendly service</p></label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="pros"
+                class="input-checkbox"
+                value="interior"
+              />
+              <p class="classy">Our cosy interior</p></label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="pros"
+                class="input-checkbox"
+                value="price"
+              />
+              <p class="classy">Price of drinks</p></label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="pros"
+                class="input-checkbox"
+                value="variety"
+              />
+              <p class="classy">Variety of drinks</p></label
+            >
+          </div>
+        </div>
+        <div><p id="smth">Something else?</p></div>
+        <label for="like"
+          ><input id="like" type="text" placeholder="I like ..."
+        /></label>
+
+        <div>
+          <p id="s">What could be better?</p>
+          <textarea
+            name="feedback"
+            id="pros"
+            cols="30"
+            rows="10"
+            placeholder="I would prefer..."
+          ></textarea>
+        </div>
+
+        <div class="p">
+          <p id="r">
+            Would you like to receive our news and offers you cannot refuse?
+          </p>
+          <div class="r">
+            <label for="yes">
+              <input
+                name="newsletterSubscription"
+                id="yes"
+                type="radio"
+                value="yes"
+              />
+              <p id="yeah">I can't wait to receive it!</p></label
+            >
+
+            <label for="no">
+              <input
+                name="newsletterSubscription"
+                id="no"
+                type="radio"
+                value="no"
+              />
+              <p id="nope">
+                Leave me alone and give me my cup for free!
+              </p></label
+            >
+          </div>
+        </div>
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+
+      <p class="gl" id="farewell">
+        Thank you for your time and enjoy your day! Looking forward to seeing
+        you again!
+      </p>
+
+      <footer class="f">
+        123 Lake Shore Dr, ON • 777 777 7777 • us@me.com
+      </footer>
+    </div>
+  </body>
+</html>
